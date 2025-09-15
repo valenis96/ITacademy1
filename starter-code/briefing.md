@@ -35,25 +35,28 @@ En esta primera fase, te centrarás en la base de todo: **HTML y CSS** puro. Es 
     -   Aplica el principio de "Mobile First". Comienza diseñando para la vista móvil y luego utiliza media queries para adaptar el diseño a pantallas más grandes (`@media (min-width: 768px)`).
     -   No uses `width` fijos. Usa porcentajes, `em`, `rem`, `vw` y `vh` para que el diseño se adapte.
 
-### Tareas de Desarrollo (Checklist)**
+### Tareas de Desarrollo (Checklist)
 
 -   [ ] **Preparación del repositorio**:
-    -   [ ] - Clona el repositorio con las instrucciones
+    -   [ ] Clona el repositorio con las instrucciones
 ```bash
       $ git clone https://github.com/IT-Academy-BCN/bookmark-landing-page.git  
       $ cd bookmark-landing-page
 ```
-    -   [ ] - Desconecta tu repositorio del repositorio de IT Academy. Utiliza el comando de git:
+
+    -   [ ] Desconecta tu repositorio del repositorio de IT Academy. Utiliza el comando de git:
 
 ```sh  
       $ git remote rm origin  
 ```
-    -   [ ] - Conecta el repositorio con tu cuenta de GitHub:  
+
+    -   [ ] Conecta el repositorio con tu cuenta de GitHub:  
 
 ```sh  
       $ git remote add origin <URL-del-teu-repositori>  
 ```
-    -   [ ] - Trabaja con la rama **`feature/vanilla-implementation`**
+
+    -   [ ] Trabaja con la rama **`feature/vanilla-implementation`**
 
 -   [ ] **HTML**:
     -   [ ] Estructura la página con un esqueleto semántico (`<header>`, `<main>`, `<footer>`, etc.).
