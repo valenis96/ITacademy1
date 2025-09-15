@@ -38,22 +38,23 @@ En esta primera fase, te centrarás en la base de todo: **HTML y CSS** puro. Es 
 ### Tareas de Desarrollo (Checklist)
 
 -   [ ] **Preparación del repositorio**:
+
     -   [ ] Clona el repositorio con las instrucciones
 ```bash
-      $ git clone https://github.com/IT-Academy-BCN/bookmark-landing-page.git  
-      $ cd bookmark-landing-page
+    $ git clone https://github.com/IT-Academy-BCN/bookmark-landing-page.git  
+    $ cd bookmark-landing-page
 ```
 
     -   [ ] Desconecta tu repositorio del repositorio de IT Academy. Utiliza el comando de git:
 
 ```sh  
-      $ git remote rm origin  
+    $ git remote rm origin  
 ```
 
     -   [ ] Conecta el repositorio con tu cuenta de GitHub:  
 
 ```sh  
-      $ git remote add origin <URL-del-teu-repositori>  
+    $ git remote add origin <URL-del-teu-repositori>  
 ```
 
     -   [ ] Trabaja con la rama **`feature/vanilla-implementation`**
