@@ -2,15 +2,15 @@
 
 En este ejercicio, vamos a construir una landing page para Bookmark utilizando los diseños proporcionados en la carpeta designs. El objetivo es que domines las buenas prácticas de maquetación, el diseño responsive y la accesibilidad, trabajando de forma iterativa y progresiva.
 
+## Requerimientos de repositorio de GitHub
+- Cada iteración irá desarrollada en su propia rama. Al final del proyecto la rama `main` contendrá la versión final que será la que haya que desplegar en [gh-pages](https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site).
+- Extrae los recursos de la carpeta (`/images`) para adaptarlo a estructura de tu proyecto. 
+- Incluye un fichero de README completo que siga las [recomendaciones](https://github.com/RichardLitt/standard-readme?tab=readme-ov-file) 
+- Sigue [buenas prácticas](https://gist.github.com/luismts/495d982e8c5b1a0ced4a57cf3d93cf60) de commits.
+
 ## Iteración 1: Maquetación con HTML y CSS
 
 En esta primera fase, te centrarás en la base de todo: **HTML y CSS** puro. Es el momento de sentar las bases de una estructura robusta y un estilo limpio.
-
-### Requerimientos de repositorio de GitHub
-
-- Incluye un fichero de README completo que siga las [recomendaciones](https://github.com/RichardLitt/standard-readme?tab=readme-ov-file) 
-- Sigue [buenas prácticas](https://gist.github.com/luismts/495d982e8c5b1a0ced4a57cf3d93cf60) de commits
-- Cuando termines el trabajo de la rama de desarrollo de una iteración haz merge a la rama `main` y despliega la aplicación utilizando [gh-pages](https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
 ### Requerimientos de la iteración 1
 
