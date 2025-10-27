@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="landing-page--header" role="banner">
+        <img src="..\starter-code\images\logo-bookmark.svg" alt="Bookmark logo">
+        <nav class="landing-page--header-nav" role="navigation" aria-label="Main navigation">
+            <button class="landing-page--nav-icon" aria-label="Open main menu">
+                <img src="..\starter-code\images\icon-hamburger.svg" alt="Hamburger menu">
+            </button>
+            <div class="landing-page--nav-menu">
+                <a>FEATURE</a>
+                <a>PRICING</a>
+                <a>CONTACT</a>
+                <button class="landing-page--btn btn-tertiary">LOGIN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="landing-page--container" role="main">
+        <section class="landing-page--section" aria-labelledby="intro-title">
+            <div class="landing-page--image">
+                <img class="landing-page--image-img" src="..\starter-code\images\illustration-features-tab-1.svg" alt="Illustration of bookmark interface">
+                <div class="landing-page--image-shape"></div>
+            </div>
+            <div class="landing-page--intro">
+                <div class="landing-page--text">
+                    <h1 class="landing-page--text-title" id="intro-title">A Simple Bookmark Manager</h1>
+                    <p class="landing-page--text-paragraf">A clean and simple interface to organizza your favorite websites. Open a new browser tab and see your sites load instantly. Try for free.</p>
+                </div>
+                <div class="landing-page--buttons" role="group" aria-label="Download buttons">
+                    <button class="landing-page--btn">Get it on Chrome</button>
+                    <button class="landing-page--btn btn-secondary">Get it on Firefox</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="landing-page--section" aria-labelledby="features-title">
+            <div class="landing-page--text centered-text">
+                <h1 class="landing-page--text-title" id="features-title">Features</h1>
+                <p class="landing-page--text-paragraf">Our aim is to make it quick and easy for you to access your favorite websites. Your bookmarks sinc between your devices so you can access them on th go.</p>
+            </div>
+            <div class="landing-page--carusel" role="tablist" aria-label="Feature tabs">
+                <div class="landing-page--carusel-buttons">
+                    <button class="landing-page--carusel-btn" role="tab" aria-controls="feature-1" id="tab-1">
+                        <p>Simple Bookmarking</p>
+                        <div class="selected-btn"></div>
+                    </button>
+                    <button class="landing-page--carusel-btn" role="tab" aria-controls="feature-2" id="tab-2">
+                        <p>Speedy Searching</p>
+                        <div class=""></div>
+                    </button>
+                    <button class="landing-page--carusel-btn" role="tab" aria-controls="feature-3" id="tab-3">
+                        <p>Easy Sharing</p>
+                        <div class=""></div>
+                    </button>
+                </div>
+                <div id="feature-1" class="landing-page--selected-feature" role="tabpanel" aria-labelledby="tab-1">
+                    <div class="landing-page--image image-reverse">
+                        <img class="landing-page--image-img" src="..\starter-code\images\illustration-features-tab-1.svg"  alt="Illustration of bookmark interface">
+                        <div class="landing-page--image-shape"></div>
+                    </div>
+                    <div class="landing-page--feature-desc">
+                        <div class="landing-page--text">
+                            <h1 class="landing-page--text-title">Bookmark in one click</h1>
+                            <p class="landing-page--text-paragraf">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                        </div>
+                        <div class="landing-page--buttons" role="group" aria-label="Download buttons">
+                            <button class="landing-page--btn">More Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="landing-page--section" aria-labelledby="download-extension-title">
+            <div class="landing-page--text centered-text">
+                <h1 class="landing-page--text-title" id="download-extension-title">Download the extension</h1>
+                <p class="landing-page--text-paragraf">We've got more browser in the pipeline. Please do let us know if you've got a favourite you'd like us prioritize.</p>
+            </div>
+            <!-- qui in realtà sarebbe carino un loop -->
+            <div class="landing-page--cards">
+                <div class="landing-page--card"> 
+                    <div class="landing-page--card-top">
+                        <img class="landing-page--card-image" src="..\starter-code\images\logo-chrome.svg" alt="Chrome logo">
+                        <div class="landing-page--text">
+                            <h3 class="landing-page--text-title">Add to Chrome</h3>
+                            <p class="landing-page--text-paragraf">Minimum version 62</p>
+                        </div>
+                    </div>
+                    <div class="landing-page--card-button">
+                        <button class="landing-page--btn">Add & Install Extension</button>
+                    </div>
+                </div>
+                <div class="landing-page--card"> 
+                    <div class="landing-page--card-top">
+                        <img class="landing-page--card-image" src="..\starter-code\images\logo-firefox.svg" alt="Firefox logo">
+                        <div class="landing-page--text">
+                            <h3 class="landing-page--text-title">Add to Firefox</h3>
+                            <p class="landing-page--text-paragraf">Minimum version 55</p>
+                        </div>
+                    </div>
+                    <div class="landing-page--card-button">
+                        <button class="landing-page--btn">Add & Install Extension</button>
+                    </div>
+                </div>
+
+                <div class="landing-page--card"> 
+                    <div class="landing-page--card-top">
+                        <img class="landing-page--card-image" src="..\starter-code\images\logo-opera.svg" alt="Opera logo">
+                        <div class="landing-page--text">
+                            <h3 class="landing-page--text-title">Add to Opera</h3>
+                            <p class="landing-page--text-paragraf">Minimum version 46</p>
+                        </div>
+                    </div>
+                    <div class="landing-page--card-button">
+                        <button class="landing-page--btn">Add & Install Extension</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="landing-page--section" aria-labelledby="faq-title">
+            <div class="landing-page--text centered-text">
+                <h1 class="landing-page--text-title" id="faq-title">Frequently Asked Questions</h1>
+                <p class="landing-page--text-paragraf">Here are some our FAQs. If you have any other questions you'd like answered please feel cree to email us.</p>
+            </div>
+            <div class="landing-page--faq">
+                <button class="landing-page--faq-btn">
+                    <p>What is Bookmark?</p>
+                    <span class="arrow-down"></span>
+                </button>
+                <button class="landing-page--faq-btn">
+                    <p>How can I request a new browser?</p>
+                    <span class="arrow-down"></span>
+                </button>
+                <button class="landing-page--faq-btn">
+                    <p>Is there a mobile app?</p>
+                    <span class="arrow-down"></span>
+                </button>
+                <button class="landing-page--faq-btn">
+                    <p>What about other Chromium browsers?</p>
+                    <span class="arrow-down"></span>
+                </button>
+            </div>
+
+            <div class="landing-page--button">
+                <button class="landing-page--btn">More Info</button>
+            </div>
+        </section>
+    </main>
+    <footer class="landing-page--footer" role="contentinfo">
+        <div class="landing-page--footer-cta" role="form" aria-label="Newsletter subscription">
+            <p>35,000+ ALREADY JOINED</p>
+            <h2>Stay up-to-date with what we're doing</h2>
+            <div class="landing-page--footer-subscribe">
+                <input id="email-input" type="email" placeholder="Enter your email address" aria-required="true">
+                <button class="landing-page--btn btn-tertiary" type="submit">Contact Us</button>
+            </div>
+        </div>
+
+        <div class="landing-page--footer-menu" role="navigation" aria-label="Footer menu">
+            <img src="..\starter-code\images\logo-bookmark.svg" alt="Bookmark logo">
+            <button>FEATURE</button>
+            <button>PRICING</button>
+            <button>CONTACT</button>
+            <div class="landing-page--footer-social" aria-label="Social media links">
+                <a href="#" aria-label="Facebook">
+                    <img src="..\starter-code\images\icon-facebook.svg" alt="Facebook logo">
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <img src="..\starter-code\images\icon-twitter.svg" alt="Twitter logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
