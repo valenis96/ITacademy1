@@ -22,12 +22,12 @@ html {
     margin: auto;
 }
 
-body{
+body {
     margin: 0;
     overflow-x: hidden;
 }
 
-button{
+button {
     background-color: transparent;
     border-color: transparent;
 }
@@ -114,7 +114,6 @@ h3.landing-page--text-title {
     gap: 1rem;
     justify-content: center;
 }
-
 
 .landing-page--btn {
     padding: 1.5rem;
@@ -235,7 +234,7 @@ h3.landing-page--text-title {
 
 .landing-page--footer{
     margin-top: 10rem;
-    background-color: #4f64d9;
+    background-color:  var(--color-primary);
 }
 
 .landing-page--footer-cta{

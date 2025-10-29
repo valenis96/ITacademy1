@@ -1,0 +1,31 @@
+@use "placeholders";
+@use "variables";
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: small;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+button {
+  @extend %button-base;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$black;
+}

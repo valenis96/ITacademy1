@@ -1,0 +1,10 @@
+%button-base {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+%vertical-flex-base {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
