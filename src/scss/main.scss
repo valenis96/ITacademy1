@@ -1,0 +1,390 @@
+@use "variables";
+@use "placeholders";
+@use "mixins";
+@use "layout";
+
+.landing-page {
+  &--header {
+    @include mixins.flexbox(null, center, space-between);
+    padding: 1rem;
+  }
+
+  &--nav-menu {
+    display: none;
+  }
+
+  &--container {
+    @extend %vertical-flex-base;
+    margin: 0 2rem;
+  }
+
+  &--section {
+    @include mixins.flexbox(column, center, null, 2rem);
+    padding-top: 4rem;
+  }
+
+  &--image {
+    width: 100%;
+    position: relative;
+
+    &-img {
+      border: 1rem solid variables.$black;
+      border-radius: 2rem;
+      width: 90%;
+      position: absolute;
+      box-shadow: -10px 30px 25px variables.$grey;
+    }
+
+    &-shape {
+      background-color: variables.$primary-color;
+      width: 100%;
+      height: 18rem;
+      border-radius: 70% 0 0 40%;
+      margin: 6rem 0 0 5rem;
+    }
+
+    &.image-reverse {
+      transform: scaleX(-1);
+    }
+  }
+
+  &--text {
+    @include mixins.flexbox(column);
+    margin: 0 2rem;
+
+    &-title {
+      font-size: variables.$title-font-size;
+      text-align: center;
+      font-weight: 800;
+      color: variables.$black;
+    }
+
+    &-paragraf {
+      text-align: center;
+      font-size: variables.$p-font-size;
+    }
+
+    h3.landing-page--text-title {
+      font-size: variables.$p-font-size;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  &--buttons {
+    @include mixins.flexbox(null, null, center, 1rem);
+    padding: 1rem 0;
+  }
+
+  &--btn {
+    padding: 1.5rem;
+    color: variables.$white;
+    font-weight: variables.$p-font-weight;
+    background-color: variables.$primary-color;
+    border-radius: 0.5rem;
+    border: 0;
+    box-shadow: 3px 8px 10px variables.$grey;
+
+    &.btn-secondary {
+      color: variables.$black;
+      background-color: variables.$background-color;
+    }
+
+    &.btn-tertiary {
+      background-color: variables.$red;
+      color: variables.$white;
+    }
+  }
+
+  &--carusel {
+    @extend %vertical-flex-base;
+
+    &-buttons {
+      @include mixins.flexbox(column);
+      border-top: 1px solid variables.$grey;
+      margin-top: 2rem;
+    }
+
+    &-btn {
+      @include mixins.flexbox(column, center);
+      border: 0;
+      border-bottom: 1px solid variables.$grey;
+      padding: 0;
+
+      p {
+        font-size: variables.$p-font-size;
+        font-weight: variables.$p-font-weight;
+      }
+
+      .selected-btn {
+        width: 40%;
+        border-bottom: 2px solid variables.$red;
+        transform: translateY(2px);
+      }
+    }
+  }
+
+  &--selected-feature {
+    @extend %vertical-flex-base;
+  }
+
+  &--feature-desc .landing-page--buttons {
+    display: none;
+  }
+
+  &--cards {
+    @extend %vertical-flex-base;
+  }
+
+  &--card {
+    height: fit-content;
+    box-shadow: 0 10px 15px variables.$grey;
+
+    &-top {
+      padding: 2rem;
+      border-bottom: 6px dotted variables.$grey;
+    }
+
+    &-image {
+      margin: 2rem 5rem;
+    }
+
+    &-button {
+      @include mixins.flexbox(null, null, center);
+
+      .landing-page--btn {
+        width: 100%;
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  }
+
+  &--faq {
+    @include mixins.flexbox(column);
+    margin: 2rem 0;
+    width: 100%;
+
+    &-btn {
+      @include mixins.flexbox(null, center, space-between);
+      width: 100%;
+      border-bottom: 1px solid variables.$grey;
+
+      p {
+        font-weight: variables.$p-font-weight;
+      }
+    }
+
+    .arrow-down {
+      width: 1rem;
+      height: 1rem;
+      border-right: 3px solid variables.$primary-color;
+      border-bottom: 3px solid variables.$primary-color;
+      transform: rotateZ(45deg);
+    }
+  }
+
+  &--footer {
+    margin-top: 10rem;
+    background-color: variables.$primary-color;
+
+    &-cta {
+      @include mixins.flexbox(column, center);
+      padding: 3rem;
+      color: variables.$white;
+
+      p {
+        font-weight: variables.$p-font-weight;
+        font-size: variables.$p-font-size;
+        margin: 0;
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: variables.$title-font-size;
+        text-align: center;
+      }
+
+      input,
+      button {
+        padding: 1rem 2rem;
+        margin: 0.5rem;
+        width: 100%;
+        border-color: transparent;
+        border-radius: 5px;
+      }
+    }
+
+    &-menu {
+      @include mixins.flexbox(column, center, null, 2rem);
+      background-color: variables.$secondary-color;
+      padding: 2rem;
+
+      button {
+        color: variables.$white;
+        font-size: variables.$p-font-size;
+      }
+    }
+
+    &-social {
+      @include mixins.flexbox(null, null, null, 3rem);
+      margin: 2rem 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .landing-page {
+    &--header {
+      margin: 0 8rem;
+    }
+
+    &--nav {
+      &-icon {
+        display: none;
+      }
+
+      &-menu {
+        @include mixins.flexbox(null, center, null, 3rem);
+        margin-right: 5rem;
+
+        & > * {
+          font-weight: variables.$p-font-weight;
+        }
+
+        button {
+          padding: 1rem 2rem;
+        }
+      }
+    }
+
+    &--container {
+      margin: 0 8rem;
+    }
+
+    &--section:first-child {
+      flex-direction: row;
+      gap: 5rem;
+
+      .landing-page--image {
+        order: 2;
+      }
+    }
+
+    &--text {
+      margin: 0;
+
+      & > * {
+        text-align: start;
+      }
+
+      &-title {
+        font-size: variables.$big-title-font-size;
+      }
+
+      &.centered-text {
+        width: 50%;
+
+        & > * {
+          text-align: center;
+        }
+      }
+    }
+
+    &--buttons {
+      justify-content: start;
+    }
+
+    &--image {
+      &-img {
+        width: 90%;
+      }
+
+      &-shape {
+        height: 28rem;
+        margin: 6rem 0 0 8rem;
+        width: 120%;
+      }
+    }
+
+    &--carusel {
+      &-buttons {
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: center;
+        border-top: none;
+        border-bottom: 1px solid variables.$grey;
+        width: fit-content;
+        margin: auto;
+      }
+
+      &-btn {
+        border-bottom: none;
+
+        p {
+          margin: 1rem 2rem;
+        }
+
+        .selected-btn {
+          width: 100%;
+        }
+      }
+    }
+
+    &--selected-feature {
+      flex-direction: row;
+    }
+
+    &--feature-desc {
+      width: 75%;
+      margin: 2rem;
+
+      .landing-page--buttons {
+        display: block;
+      }
+    }
+
+    &--cards {
+      flex-direction: row;
+
+      &--card {
+        &:nth-child(2) {
+          margin-top: 2rem;
+        }
+
+        &:nth-child(3) {
+          margin-top: 4rem;
+        }
+      }
+    }
+
+    &--faq {
+      width: 50%;
+    }
+
+    &--footer {
+      &-cta {
+        width: 40%;
+        margin: auto;
+      }
+
+      &-subscribe {
+        @include mixins.flexbox();
+        width: 100%;
+
+        button {
+          width: 50%;
+        }
+      }
+
+      &-menu {
+        flex-direction: row;
+      }
+
+      &-social {
+        width: 100%;
+        justify-content: end;
+      }
+    }
+  }
+}
