@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.tailwindcss.com/"></script>
+    <script src="tailwind-theme.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Bookmark</title> 
+  <link rel="stylesheet" crossorigin href="/assets/index-C9e3ZpSV.css">
+</head>
+<body>
+      <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+    <!-- <header class="flex items-center justify-between p-4 md:mx-32" role="banner">
+        <img src="..\starter-code\images\logo-bookmark.svg" alt="Bookmark logo">
+        <nav role="navigation" aria-label="Main navigation">
+            <button class="md:hidden" aria-label="Open main menu">
+                <img src="..\starter-code\images\icon-hamburger.svg" alt="Hamburger menu">
+            </button>
+            <div class="hidden md:flex items-center gap-12 mr-20">
+                <a href="#">FEATURE</a>
+                <a href="#">PRICING</a>
+                <a href="#">CONTACT</a>
+                <button class="py-4 px-8 m-2 w-full rounded-md text-white 
+                               font-p rounded border-0 bg-red" aria-label="Login to your account">
+                    LOGIN
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex flex-col gap-16 mx-8 md:mx-32" role="main">
+        <section class="flex flex-col items-center gap-8 pt-12 md:flex-row md:gap-20" 
+                 aria-labelledby="intro-title">
+            <div class="w-full relative md:order-last">
+                <img class="border-[1rem] border-solid border-black rounded-[2rem] 
+                            absolute shadow-[-10px_30px_25px] shadow-grey w-[90%]" 
+                    src="..\starter-code\images\illustration-features-tab-1.svg" 
+                    alt="Illustration of bookmark interface">
+                <div class="bg-primary w-full h-[18rem] rounded-[70%_0_0_40%] mt-24 ml-20
+                            md:w-[120%] md:h-[20rem]">
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col mx-8 md:m-0 gap-4">
+                    <h1 class="text-title text-center font-extrabold text-black 
+                               md:text-start text-title" 
+                        id="intro-title">
+                        A Simple Bookmark Manager
+                    </h1>
+                    <p class="text-center text-p md:text-start">
+                        A clean and simple interface to organizza your favorite websites. Open a new browser tab and see your sites load instantly. Try for free.
+                    </p>
+                </div>
+                <div class="flex justify-center gap-4 py-4 md:justify-start mt-4" role="group" aria-label="Download buttons">
+                    <button class="p-6 text-white font-p bg-primary rounded border-0 
+                                   shadow-[3px_8px_10px] shadow-grey">
+                        Get it on Chrome
+                    </button>
+                    <button class="p-6 font-p rounded border-0 shadow-[3px_8px_10px] shadow-grey text-black bg-background">
+                        Get it on Firefox
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex-col items-center gap-8 pt-12" aria-labelledby="features-title">
+            <div class="flex flex-col mx-8 md:w-[50%]">
+                <h1 class="text-title text-center font-extrabold text-black md:text-center" 
+                    id="features-title">
+                    Features
+                </h1>
+                <p class="text-center text-p md:text-center">
+                    Our aim is to make it quick and easy for you to access your favorite websites. Your bookmarks sinc between your devices so you can access them on th go.
+                </p>
+            </div>
+            <div class="flex flex-col gap-16 items-center" role="tablist" aria-label="Feature tabs">
+                <div class="flex flex-col md:flex-row justify-center md:gap-12
+                            mt-8 md:m-auto
+                            border-t border-grey md:border-t-0 md:border-b">
+                    <button class="flex flex-col items-center border-b border-b-grey md:border-0" 
+                            role="tab" aria-controls="feature-1" id="tab-1">
+                        <p class="text-p font-p my-4 mx-8">Simple Bookmarking</p>
+                        <div class="w-[60%] border-b-2 border-red translate-y-[2px]
+                                    md:w-full">
+                        </div>
+                    </button>
+                    <button class="flex flex-col items-center border-b border-b-grey md:border-0" 
+                            role="tab" aria-controls="feature-2" id="tab-2">
+                        <p class="text-p font-p my-4 mx-8">Speedy Searching</p>
+                        <div class=""></div>
+                    </button>
+                    <button class="flex flex-col items-center border-b border-b-grey md:border-0" 
+                            role="tab" aria-controls="feature-3" id="tab-3">
+                        <p class="text-p font-p my-4 mx-8">Easy Sharing</p>
+                        <div class=""></div>
+                    </button>
+                </div>
+                <div id="feature-1" class="flex flex-col gap-16 md:flex-row" 
+                     role="tabpanel" aria-labelledby="tab-1">
+                    <div class="w-full relative scale-x-[-1]">
+                        <img class="rounded-2xl absolute shadow-[-10px_30px_25px] shadow-grey
+                                    md:w-[90%]" 
+                            src="..\starter-code\images\illustration-features-tab-1.svg"  
+                            alt="Illustration of bookmark interface">
+                        <div class="bg-primary w-full h-[18rem] rounded-[70%_0_0_40%] mt-24 ml-20
+                                    md:w-[120%] md:h-[20rem]">
+                        </div>
+                    </div>
+                    <div class="md:w-[75%] m-8">
+                        <div class="flex flex-col mx-8 md:m-0">
+                            <h1 class="text-title text-center font-extrabold text-black md:text-start text-title">
+                                Bookmark in one click
+                            </h1>
+                            <p class="text-center text-p md:text-start">
+                                Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+                            </p>
+                        </div>
+                        <div class="hidden md:flex justify-center gap-4 py-4 md:justify-start" role="group" aria-label="Download buttons">
+                            <button class="p-6 text-white font-p bg-primary rounded border-0 
+                                           shadow-[3px_8px_10px] shadow-grey">
+                                More Info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex flex-col items-center gap-8 pt-12" aria-labelledby="download-extension-title">
+            <div class="flex flex-col mx-8 md:w-[50%]">
+                <h1 class="text-title text-center font-extrabold text-black md:text-center" 
+                    id="download-extension-title">
+                    Download the extension
+                </h1>
+                <p class="text-center text-p md:text-center">
+                    We've got more browser in the pipeline. Please do let us know if you've got a favourite you'd like us prioritize.
+                </p>
+            </div>
+            <div class="flex flex-col gap-16 md:flex-row">
+                <div class="h-fit shadow-[0px_10px_15px] shadow-grey"> 
+                    <div class="p-8 border-b-grey border-dotted border-b-8">
+                        <img class="mx-20 my-8" src="..\starter-code\images\logo-chrome.svg" alt="Chrome logo">
+                        <div class="flex flex-col mx-8">
+                            <h3 class="text-p text-center font-semibold text-black">Add to Chrome</h3>
+                            <p class="text-center text-p">Minimum version 62</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <button class="p-6 text-white font-p bg-primary rounded border-0 
+                                       shadow-[3px_8px_10px] shadow-grey w-full m-4">
+                            Add & Install Extension
+                        </button>
+                    </div>
+                </div>
+                <div class="h-fit shadow-[0px_10px_15px] shadow-grey md:mt-8"> 
+                    <div class="p-8 border-b-grey border-dotted border-b-8">
+                        <img class="mx-20 my-8" src="..\starter-code\images\logo-firefox.svg" alt="Firefox logo">
+                        <div class="flex flex-col mx-8">
+                            <h3 class="text-p text-center font-semibold text-black">Add to Firefox</h3>
+                            <p class="text-center text-p">Minimum version 55</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <button class="p-6 text-white font-p bg-primary rounded border-0 
+                                       shadow-[3px_8px_10px] shadow-grey w-full m-4">
+                            Add & Install Extension
+                        </button>
+                    </div>
+                </div>
+
+                <div class="h-fit shadow-[0px_10px_15px] shadow-grey md:mt-16"> 
+                    <div class="p-8 border-b-grey border-dotted border-b-8">
+                        <img class="mx-20 my-8" src="..\starter-code\images\logo-opera.svg" alt="Opera logo">
+                        <div class="flex flex-col mx-8">
+                            <h3 class="text-p text-center font-semibold text-black">Add to Opera</h3>
+                            <p class="text-center text-p">Minimum version 46</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <button class="p-6 text-white font-p bg-primary rounded border-0 
+                                       shadow-[3px_8px_10px] shadow-grey w-full m-4">
+                            Add & Install Extension
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="flex flex-col items-center gap-8 pt-12" aria-labelledby="faq-title">
+            <div class="flex flex-col mx-8 md:w-[50%]">
+                <h1 class="text-title text-center font-extrabold text-black  md:text-center" 
+                    id="faq-title">
+                    Frequently Asked Questions
+                </h1>
+                <p class="text-center text-p md:text-center">Here are some our FAQs. If you have any other questions you'd like answered please feel cree to email us.</p>
+            </div>
+            <div class="flex flex-col md:w-[50%]">
+                <button class="flex items-center justify-between gap-4 w-full border-b border-grey">
+                    <p class="font-p text-lg my-4">What is Bookmark?</p>
+                    <span class="w-4 h-4 border-r-2 border-b-2 border-primary rotate-45"></span>
+                </button>
+                <button class="flex items-center justify-between gap-4 w-full border-b border-grey">
+                    <p class="font-p text-lg my-4">How can I request a new browser?</p>
+                    <span class="w-4 h-4 border-r-2 border-b-2 border-primary rotate-45"></span>
+                </button>
+                <button class="flex items-center justify-between gap-4 w-full border-b border-grey">
+                    <p class="font-p text-lg my-4">Is there a mobile app?</p>
+                    <span class="w-4 h-4 border-r-2 border-b-2 border-primary rotate-45"></span>
+                </button>
+                <button class="flex items-center justify-between gap-4 w-full border-b border-grey">
+                    <p class="font-p text-lg my-4">What about other Chromium browsers?</p>
+                    <span class="w-4 h-4 border-r-2 border-b-2 border-primary rotate-45"></span>
+                </button>
+            </div>
+
+            <div class="flex justify-center">
+                <button class="p-6 text-white font-p bg-primary rounded border-0 
+                               shadow-[3px_8px_10px] shadow-grey">
+                    More Info
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer class="mt-40 bg-primary" role="contentinfo">
+        <div class="flex flex-col items-center p-12 text-white md:w-[50%] m-auto" role="form" aria-label="Newsletter subscription">
+            <p class="font-p text-p">35,000+ ALREADY JOINED</p>
+            <h2 class="font-semibold text-title text-center">Stay up-to-date with what we're doing</h2>
+            <div class="flex w-full">
+                <input class="py-2 px-8 m-2 w-full rounded-md" 
+                id="email-input" type="email" 
+                placeholder="Enter your email address" aria-required="true">
+                <button class="py-2 px-8 m-2 w-full rounded-md text-white 
+                               font-p rounded border-0 bg-red md:w-[50%]" type="submit">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-8 bg-secondary p-8 md:flex-row" role="navigation" aria-label="Footer menu">
+            <img src="..\starter-code\images\logo-bookmark.svg" alt="Bookmark logo">
+            <button class="text-white text-p">FEATURE</button>
+            <button class="text-white text-p">PRICING</button>
+            <button class="text-white text-p">CONTACT</button>
+            <div class="flex gap-12 my-4 md:w-full justify-end" aria-label="Social media links">
+                <a href="#" aria-label="Facebook">
+                    <img src="..\starter-code\images\icon-facebook.svg" alt="Facebook logo">
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <img src="..\starter-code\images\icon-twitter.svg" alt="Twitter logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> -->
