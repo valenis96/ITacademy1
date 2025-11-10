@@ -13,17 +13,33 @@
     <header class="landing-page--header" role="banner">
         <img src="..\starter-code\images\logo-bookmark.svg" alt="Bookmark logo">
         <nav class="landing-page--header-nav" role="navigation" aria-label="Main navigation">
-            <button class="landing-page--nav-icon" aria-label="Open main menu">
+            <button class="landing-page--nav-icon" onclick="showMenu()" aria-label="Open main menu">
                 <img src="..\starter-code\images\icon-hamburger.svg" alt="Hamburger menu">
             </button>
             <div class="landing-page--nav-menu">
-                <a>FEATURE</a>
-                <a>PRICING</a>
-                <a>CONTACT</a>
+                <a href="#">FEATURE</a>
+                <a href="#">PRICING</a>
+                <a href="#">CONTACT</a>
                 <button class="landing-page--btn btn-tertiary">LOGIN</button>
             </div>
         </nav>
     </header>
+
+    <div class="landing-page--nav-opened-menu">
+        <div class="menu">
+            <div class="menu-head">
+                <img src="..\starter-code\images\logo-bookmark.svg" alt="Bookmark logo">
+                <span class="menu-close" onclick="closeMenu()">
+                    <div class="menu-close--primary-icon"></div>
+                    <div class="menu-close--secondary-icon"></div>
+                </span>
+            </div>
+            <button>FEATURE</button>
+            <button>PRICING</button>
+            <button>CONTACT</button>
+            <button class="login">LOGIN</button>
+        </div>
+    </div>
 
     <main class="landing-page--container" role="main">
         <section class="landing-page--section" aria-labelledby="intro-title">
@@ -86,7 +102,6 @@
                 <h1 class="landing-page--text-title" id="download-extension-title">Download the extension</h1>
                 <p class="landing-page--text-paragraf">We've got more browser in the pipeline. Please do let us know if you've got a favourite you'd like us prioritize.</p>
             </div>
-            <!-- qui in realtà sarebbe carino un loop -->
             <div class="landing-page--cards">
                 <div class="landing-page--card"> 
                     <div class="landing-page--card-top">
@@ -133,23 +148,51 @@
                 <h1 class="landing-page--text-title" id="faq-title">Frequently Asked Questions</h1>
                 <p class="landing-page--text-paragraf">Here are some our FAQs. If you have any other questions you'd like answered please feel cree to email us.</p>
             </div>
-            <div class="landing-page--faq">
-                <button class="landing-page--faq-btn">
-                    <p>What is Bookmark?</p>
-                    <span class="arrow-down"></span>
-                </button>
-                <button class="landing-page--faq-btn">
-                    <p>How can I request a new browser?</p>
-                    <span class="arrow-down"></span>
-                </button>
-                <button class="landing-page--faq-btn">
-                    <p>Is there a mobile app?</p>
-                    <span class="arrow-down"></span>
-                </button>
-                <button class="landing-page--faq-btn">
-                    <p>What about other Chromium browsers?</p>
-                    <span class="arrow-down"></span>
-                </button>
+            <div class="landing-page--faq-container">
+                <div class="landing-page--faq">
+                    <div class="landing-page--faq-btn">
+                        <p>What is Bookmark?</p>
+                        <span onclick="toggleQuestion(event)" data-target="faq1" class="arrow-down"></span>
+                    </div>
+                    <div class="landing-page--faq-answer" id="faq1">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Illo unde reiciendis quis ut. Consectetur maiores illum numquam fuga sed dolorem culpa molestias sint, similique, voluptate corrupti exercitationem. 
+                        Sunt, omnis perspiciatis.
+                    </div>
+                </div>
+                <div class="landing-page--faq">
+                    <div class="landing-page--faq-btn">
+                        <p>How can I request a new browser?</p>
+                        <span onclick="toggleQuestion(event)" data-target="faq2" class="arrow-down"></span>
+                    </div>
+                    <span class="landing-page--faq-answer" id="faq2">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo unde reiciendis quis ut. 
+                        Consectetur maiores illum numquam fuga sed dolorem culpa molestias sint, similique, voluptate corrupti exercitationem. 
+                        Sunt, omnis perspiciatis.
+                    </span>
+                </div>
+                <div class="landing-page--faq">
+                    <div class="landing-page--faq-btn">
+                        <p>Is there a mobile app?</p>
+                        <span onclick="toggleQuestion(event)" data-target="faq3" class="arrow-down"></span>
+                    </div>
+                    <div class="landing-page--faq-answer" id="faq3">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Illo unde reiciendis quis ut. Consectetur maiores illum numquam fuga sed dolorem culpa molestias sint, similique, voluptate corrupti exercitationem. 
+                        Sunt, omnis perspiciatis.
+                    </div>
+                </div>
+                <div class="landing-page--faq">
+                    <div class="landing-page--faq-btn">
+                        <p>What about other Chromium browsers?</p>
+                        <span onclick="toggleQuestion(event)" data-target="faq4" class="arrow-down"></span>
+                    </div>
+                    <div class="landing-page--faq-answer" id="faq4">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Illo unde reiciendis quis ut. Consectetur maiores illum numquam fuga sed dolorem culpa molestias sint, similique, voluptate corrupti exercitationem. 
+                        Sunt, omnis perspiciatis.
+                    </div>
+                </div>
             </div>
 
             <div class="landing-page--button">
@@ -162,7 +205,12 @@
             <p>35,000+ ALREADY JOINED</p>
             <h2>Stay up-to-date with what we're doing</h2>
             <div class="landing-page--footer-subscribe">
-                <input id="email-input" type="email" placeholder="Enter your email address" aria-required="true">
+                <div class="landing-page--footer-input">
+                    <input id="email-input" type="email" required placeholder="Enter your email address" aria-required="true">
+                    <img class="icon-error" src="..\starter-code\images\icon-error.svg" alt="">
+                    <span class="error">Whoops, make sure it's an email</span>
+                </div>
+
                 <button class="landing-page--btn btn-tertiary" type="submit">Contact Us</button>
             </div>
         </div>
@@ -182,5 +230,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
