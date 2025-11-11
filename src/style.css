@@ -20,10 +20,12 @@
 html {
     width: 100%;
     margin: auto;
+    overflow-x: hidden;
 }
 
 body{
     margin: 0;
+    position:relative;
     overflow-x: hidden;
 }
 
@@ -42,6 +44,76 @@ button{
 .landing-page--nav-menu{
     display: none;
 }
+
+.landing-page--nav-opened-menu{
+    visibility: hidden;
+    background-color: #242946e1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    z-index: 999;
+}
+
+.landing-page--nav-opened-menu.show{
+    visibility: visible;
+}
+
+.landing-page--nav-opened-menu .menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem;
+}
+
+.landing-page--nav-opened-menu .menu > *{
+    border-bottom: 1px solid #ffffff92;
+    padding-bottom: 2rem;
+}
+
+.landing-page--nav-opened-menu .menu .menu-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 4rem;
+}
+
+.landing-page--nav-opened-menu .menu .menu-head .menu-close{
+    position: relative;
+     width: 3rem;
+    height: 3rem;
+}
+
+.landing-page--nav-opened-menu .menu .menu-head .menu-close--primary-icon{
+    width: 2rem;
+    height: 2rem;
+    border-right: 3px solid #fff ;
+    transform: rotateZ(45deg) translatey(-0.9rem);;
+    position: absolute;
+}
+
+.landing-page--nav-opened-menu .menu .menu-head .menu-close--secondary-icon{
+    width: 2rem;
+    height: 2rem;
+    border-right: 3px solid #fff ;
+    transform: rotateZ(-45deg) translatey(0.9rem);
+    position: absolute;
+}
+
+
+.landing-page--nav-opened-menu .menu button{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.landing-page--nav-opened-menu .menu .login{
+    padding: 1rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
 
 .landing-page--container {
     display: flex;
@@ -115,20 +187,26 @@ h3.landing-page--text-title {
     justify-content: center;
 }
 
-
 .landing-page--btn {
     padding: 1.5rem;
     color: var(--white);
     font-weight: 500;
     background-color: var(--color-primary);
     border-radius: 0.5rem;
-    border: 0;
-    box-shadow: 3px 8px 10px var(--grey)
+    border: 2px solid var(--color-primary);
+    box-shadow: 3px 8px 10px var(--grey);
+    cursor: pointer;
+}
+
+.landing-page--btn:hover{
+    background-color: var(--white);
+    color: var(--color-primary);
 }
 
 .btn-secondary {
     color: var(--black);
     background-color: var(--color-background);
+    border-color: transparent;
 }
 
 .landing-page--carusel{
@@ -156,8 +234,12 @@ h3.landing-page--text-title {
 .landing-page--carusel-btn p{
     font-size: 1.2rem;
     font-weight: 400;
+    cursor: pointer;
 }
 
+.landing-page--carusel-btn p:hover{
+    color: var(--red);
+}
 
 .selected-btn{
     width: 40%;
@@ -206,23 +288,32 @@ h3.landing-page--text-title {
     padding: 1.5rem;
 }
 
-.landing-page--faq{
+.landing-page--faq-container{
     display: flex;
     flex-direction: column;
     margin: 2rem 0;
     width: 100%;
 }
 
+.landing-page--faq{
+    border-bottom: 1px solid var(--grey);
+    margin: 0 1rem;
+    padding: 1rem 0;
+}
+
 .landing-page--faq-btn{
     width: 100%;
-    border-bottom: 1px solid var(--grey);
     display: flex;
     align-items: center;
     justify-content:space-between;
 }
 
+.landing-page--faq-btn:hover p{
+    color: var(--red);
+}
+
 .landing-page--faq-btn p{
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .arrow-down{
@@ -231,6 +322,26 @@ h3.landing-page--text-title {
     border-right: 3px solid  var(--color-primary);
     border-bottom: 3px solid  var(--color-primary);
     transform: rotateZ(45deg);
+    cursor: pointer;
+}
+
+.arrow-up{
+    width: 1rem;
+    height: 1rem;
+    border-right: 3px solid  var(--red);
+    border-bottom: 3px solid  var(--red);
+    transform: rotateZ(-135deg);
+}
+
+.landing-page--faq-answer{
+    line-height: 2rem;
+    font-weight: 400;
+    display: none;
+    margin: 1rem 0;
+}
+
+.landing-page--faq-answer.show{
+    display: inline;
 }
 
 .landing-page--footer{
@@ -258,17 +369,70 @@ h3.landing-page--text-title {
     text-align: center;
 }
 
+.landing-page--footer-subscribe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.landing-page--footer-input{
+    position: relative;
+}
+
 .landing-page--footer-cta input, .landing-page--footer-cta button{
     padding: 1rem 2rem;
-    margin: 0.5rem;
     width: 100%;
-    border-color: transparent;
     border-radius: 5px;
+}
+
+.landing-page--footer-cta input{
+    border:2px solid var(--white);
+}
+
+.landing-page--footer-cta input:focus-visible{
+    outline: 0;
+}
+
+.landing-page--footer-cta .error {
+  display: none;
+  background-color: var(--red);
+  color:  var(--white);
+  font-size: 0.8rem;
+  padding: 2px;
+  padding-left: 1rem;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  left: 3px;
+}
+
+.landing-page--footer-cta .icon-error {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 20%;
+}
+
+.landing-page--footer-cta input:not(:placeholder-shown):invalid{
+    border: 3px solid var(--red);
+    border-bottom: 20px solid  var(--red);
+}
+
+.landing-page--footer-cta input:invalid:not(:placeholder-shown) ~ .error,
+.landing-page--footer-cta input:invalid:not(:placeholder-shown) ~ .icon-error {
+  display: inline;
 }
 
 .btn-tertiary{
     background-color: var(--red);
     color: var(--white);
+    border: 2px solid var(--red);
+}
+
+.btn-tertiary:hover{
+    background-color:var(--white);
+    color: var(--red);
 }
 
 .landing-page--footer-menu{
@@ -309,10 +473,13 @@ h3.landing-page--text-title {
 
     .landing-page--nav-menu > *{
         font-weight: 400;
+        text-decoration: none;
+        color: var(--black);
     }
 
     .landing-page--nav-menu button{
         padding: 1rem 2rem;
+        color: var(--white);
     }
 
     .landing-page--container {
@@ -342,6 +509,11 @@ h3.landing-page--text-title {
 
     .landing-page--buttons{
         justify-content: start;
+    }
+
+    .btn-secondary:hover{
+        border-color: var(--black);
+        color: var(--black);
     }
     
     .landing-page--image-img{
@@ -409,7 +581,7 @@ h3.landing-page--text-title {
         margin-top: 4rem;
     }
 
-    .landing-page--faq{
+    .landing-page--faq-container{
         width: 50%;
     }
 
@@ -420,15 +592,22 @@ h3.landing-page--text-title {
       
     .landing-page--footer-subscribe{
         display: flex;
-        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
     }
 
     .landing-page--footer-subscribe button{
-        width: 50%;
+        width: 30%;
+        padding: 1rem;
     }
 
     .landing-page--footer-menu{
         flex-direction: row;
+    }
+
+    .landing-page--footer-input{
+        width: 100%;
     }
 
     .landing-page--footer-social{
